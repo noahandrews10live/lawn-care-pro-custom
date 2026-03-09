@@ -1,60 +1,56 @@
 {
-  "name": "Job Schedule",
-  "doctype": "DocType",
-  "module": "LawnCare Pro",
-  "autoname": "hash",
-  "is_submittable": 0,
-  "fields": [
-    {
-      "fieldname": "property",
-      "fieldtype": "Link",
-      "label": "Property",
-      "options": "Property",
-      "in_list_view": 1,
-      "reqd": 1
-    },
-    {
-      "fieldname": "service_plan",
-      "fieldtype": "Link",
-      "label": "Service Plan",
-      "options": "Service Plan",
-      "in_list_view": 1
-    },
-    {
-      "fieldname": "scheduled_date",
-      "fieldtype": "Date",
-      "label": "Scheduled Date",
-      "in_list_view": 1,
-      "reqd": 1
-    },
-    {
-      "fieldname": "status",
-      "fieldtype": "Select",
-      "label": "Status",
-      "options": "Scheduled\nIn Progress\nCompleted\nCancelled",
-      "in_list_view": 1,
-      "default": "Scheduled"
-    },
-    {
-      "fieldname": "assigned_crew",
-      "fieldtype": "Data",
-      "label": "Assigned Crew",
-      "in_list_view": 1
-    },
-    {
-      "fieldname": "route_order",
-      "fieldtype": "Int",
-      "label": "Route Order",
-      "in_list_view": 1
-    }
-  ],
-  "permissions": [
-    {
-      "role": "LawnCare Pro User",
-      "read": 1,
-      "write": 1,
-      "create": 1,
-      "delete": 1
-    }
-  ]
+ "name": "Job Schedule",
+ "doctype": "DocType",
+ "module": "LawnCare Pro",
+ "autoname": "field",
+ "name_case": "Title Case",
+ "is_submittable": 0,
+ "editable_grid": 1,
+ "track_changes": 1,
+ "fields": [
+  {
+   "fieldname": "property",
+   "fieldtype": "Link",
+   "label": "Property",
+   "options": "Property",
+   "reqd": 1
+  },
+  {
+   "fieldname": "service_plan",
+   "fieldtype": "Link",
+   "label": "Service Plan",
+   "options": "Service Plan"
+  },
+  {
+   "fieldname": "scheduled_date",
+   "fieldtype": "Date",
+   "label": "Scheduled Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Scheduled\nIn Progress\nCompleted\nCancelled"
+  },
+  {
+   "fieldname": "assigned_crew",
+   "fieldtype": "Data",
+   "label": "Assigned Crew"
+  },
+  {
+   "fieldname": "route_order",
+   "fieldtype": "Int",
+   "label": "Route Order"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "LawnCare Pro User",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  }
+ ]
 }

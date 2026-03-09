@@ -1,49 +1,48 @@
 {
-  "name": "Field Check-in",
-  "doctype": "DocType",
-  "module": "LawnCare Pro",
-  "autoname": "hash",
-  "is_submittable": 0,
-  "fields": [
-    {
-      "fieldname": "job_schedule",
-      "fieldtype": "Link",
-      "label": "Job Schedule",
-      "options": "Job Schedule",
-      "in_list_view": 1,
-      "reqd": 1
-    },
-    {
-      "fieldname": "check_in_time",
-      "fieldtype": "Datetime",
-      "label": "Check In Time",
-      "in_list_view": 1
-    },
-    {
-      "fieldname": "check_out_time",
-      "fieldtype": "Datetime",
-      "label": "Check Out Time",
-      "in_list_view": 1
-    },
-    {
-      "fieldname": "photos",
-      "fieldtype": "Attach Image",
-      "label": "Photos",
-      "multiple": 1
-    },
-    {
-      "fieldname": "notes",
-      "fieldtype": "Text",
-      "label": "Notes"
-    }
-  ],
-  "permissions": [
-    {
-      "role": "LawnCare Pro User",
-      "read": 1,
-      "write": 1,
-      "create": 1,
-      "delete": 1
-    }
-  ]
+ "name": "Field Check-in",
+ "doctype": "DocType",
+ "module": "LawnCare Pro",
+ "autoname": "field",
+ "name_case": "Title Case",
+ "is_submittable": 0,
+ "editable_grid": 1,
+ "track_changes": 1,
+ "fields": [
+  {
+   "fieldname": "job_schedule",
+   "fieldtype": "Link",
+   "label": "Job Schedule",
+   "options": "Job Schedule",
+   "reqd": 1
+  },
+  {
+   "fieldname": "check_in_time",
+   "fieldtype": "Datetime",
+   "label": "Check In Time"
+  },
+  {
+   "fieldname": "check_out_time",
+   "fieldtype": "Datetime",
+   "label": "Check Out Time"
+  },
+  {
+   "fieldname": "photos",
+   "fieldtype": "Attach Image",
+   "label": "Photos"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "LawnCare Pro User",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  }
+ ]
 }

@@ -1,53 +1,53 @@
 {
-  "name": "Property",
-  "doctype": "DocType",
-  "module": "LawnCare Pro",
-  "autoname": "field:customer",
-  "is_submittable": 0,
-  "fields": [
-    {
-      "fieldname": "customer",
-      "fieldtype": "Link",
-      "label": "Customer",
-      "options": "Customer",
-      "in_list_view": 1,
-      "reqd": 1
-    },
-    {
-      "fieldname": "latitude",
-      "fieldtype": "Data",
-      "label": "Latitude",
-      "in_list_view": 1
-    },
-    {
-      "fieldname": "longitude",
-      "fieldtype": "Data",
-      "label": "Longitude",
-      "in_list_view": 1
-    },
-    {
-      "fieldname": "gate_code",
-      "fieldtype": "Data",
-      "label": "Gate Code"
-    },
-    {
-      "fieldname": "square_footage",
-      "fieldtype": "Int",
-      "label": "Square Footage"
-    },
-    {
-      "fieldname": "access_notes",
-      "fieldtype": "Text",
-      "label": "Access Notes"
-    }
-  ],
-  "permissions": [
-    {
-      "role": "LawnCare Pro User",
-      "read": 1,
-      "write": 1,
-      "create": 1,
-      "delete": 1
-    }
-  ]
+ "name": "Property",
+ "doctype": "DocType",
+ "module": "LawnCare Pro",
+ "autoname": "field",
+ "name_case": "Title Case",
+ "is_submittable": 0,
+ "editable_grid": 1,
+ "track_changes": 1,
+ "fields": [
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "latitude",
+   "fieldtype": "Data",
+   "label": "Latitude"
+  },
+  {
+   "fieldname": "longitude",
+   "fieldtype": "Data",
+   "label": "Longitude"
+  },
+  {
+   "fieldname": "gate_code",
+   "fieldtype": "Data",
+   "label": "Gate Code"
+  },
+  {
+   "fieldname": "square_footage",
+   "fieldtype": "Int",
+   "label": "Square Footage"
+  },
+  {
+   "fieldname": "access_notes",
+   "fieldtype": "Text",
+   "label": "Access Notes"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "LawnCare Pro User",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  }
+ ]
 }
