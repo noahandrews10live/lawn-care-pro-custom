@@ -1,0 +1,21 @@
+[project]
+name = "lawn_care_pro"
+version = "0.0.1"
+description = "Lawn Care CRM - Property Management, Scheduling, Field Service"
+authors = ["LawnCare Pro <support@lawncarepro.com>"]
+requires-python = ">=3.10"
+dependencies = [
+    "frappe>=15.0.0",
+]
+
+[build-system]
+requires = ["flit_core>=3.4"]
+build-backend = "flit_core.buildapi"
+
+[tool.frappe]
+app_title = "LawnCare Pro"
+app_publisher = "LawnCare Pro"
+app_icon = "fa fa-leaf"
+app_color = "#2ecc71"
+app_email = "support@lawncarepro.com"
+app_license = "MIT"
