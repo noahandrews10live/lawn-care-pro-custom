@@ -1,0 +1,2 @@
+# patches.txt
+# Custom app patches for lawn_care_pro
