@@ -4,8 +4,6 @@
   "module": "LawnCare Pro",
   "autoname": "hash",
   "is_submittable": 0,
-  "editable_grid": 1,
-  "track_changes": 1,
   "fields": [
     {
       "fieldname": "property",
@@ -13,56 +11,31 @@
       "label": "Property",
       "options": "Property",
       "in_list_view": 1,
-      "reqd": 1,
-      "description": "Link to Property"
+      "reqd": 1
     },
     {
       "fieldname": "frequency",
       "fieldtype": "Select",
       "label": "Frequency",
-      "options": "Weekly\nBi-Weekly\nTri-Weekly\nMonthly\nOne-Time",
-      "in_list_view": 1,
-      "reqd": 1,
-      "description": "Service frequency"
+      "options": "Weekly\nBi-Weekly\nMonthly\nOne-Time",
+      "in_list_view": 1
     },
     {
       "fieldname": "services_list",
       "fieldtype": "Small Text",
-      "label": "Services List",
-      "description": "List of services included (e.g., Mowing, Trimming, Edging)"
+      "label": "Services List"
     },
     {
       "fieldname": "price",
       "fieldtype": "Currency",
       "label": "Price",
-      "in_list_view": 1,
-      "description": "Monthly service price"
+      "in_list_view": 1
     },
     {
       "fieldname": "start_date",
       "fieldtype": "Date",
       "label": "Start Date",
-      "in_list_view": 1,
-      "description": "When service plan begins"
-    },
-    {
-      "fieldname": "end_date",
-      "fieldtype": "Date",
-      "label": "End Date",
-      "description": "When service plan ends (optional)"
-    },
-    {
-      "fieldname": "is_active",
-      "fieldtype": "Check",
-      "label": "Is Active",
-      "default": "1",
-      "description": "Plan is currently active"
-    },
-    {
-      "fieldname": "notes",
-      "fieldtype": "Text",
-      "label": "Notes",
-      "description": "Additional notes about service plan"
+      "in_list_view": 1
     }
   ],
   "permissions": [
@@ -72,17 +45,6 @@
       "write": 1,
       "create": 1,
       "delete": 1
-    },
-    {
-      "role": "Sales User",
-      "read": 1,
-      "write": 1
-    },
-    {
-      "role": "Customer",
-      "read": 1
     }
-  ],
-  "sort_field": "modified",
-  "sort_order": "DESC"
+  ]
 }

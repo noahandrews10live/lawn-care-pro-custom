@@ -4,8 +4,6 @@
   "module": "LawnCare Pro",
   "autoname": "hash",
   "is_submittable": 0,
-  "editable_grid": 1,
-  "track_changes": 1,
   "fields": [
     {
       "fieldname": "property",
@@ -13,73 +11,41 @@
       "label": "Property",
       "options": "Property",
       "in_list_view": 1,
-      "reqd": 1,
-      "description": "Link to Property"
+      "reqd": 1
     },
     {
       "fieldname": "service_plan",
       "fieldtype": "Link",
       "label": "Service Plan",
       "options": "Service Plan",
-      "in_list_view": 1,
-      "description": "Link to Service Plan"
+      "in_list_view": 1
     },
     {
       "fieldname": "scheduled_date",
       "fieldtype": "Date",
       "label": "Scheduled Date",
       "in_list_view": 1,
-      "reqd": 1,
-      "description": "Date for scheduled service"
-    },
-    {
-      "fieldname": "scheduled_time",
-      "fieldtype": "Time",
-      "label": "Scheduled Time",
-      "description": "Time for scheduled service"
+      "reqd": 1
     },
     {
       "fieldname": "status",
       "fieldtype": "Select",
       "label": "Status",
-      "options": "Scheduled\nIn Transit\nIn Progress\nCompleted\nCancelled\nNo Access",
+      "options": "Scheduled\nIn Progress\nCompleted\nCancelled",
       "in_list_view": 1,
-      "default": "Scheduled",
-      "description": "Current job status"
+      "default": "Scheduled"
     },
     {
       "fieldname": "assigned_crew",
       "fieldtype": "Data",
       "label": "Assigned Crew",
-      "in_list_view": 1,
-      "description": "Crew or technician assigned"
-    },
-    {
-      "fieldname": "field_user",
-      "fieldtype": "Link",
-      "label": "Field User",
-      "options": "User",
-      "in_list_view": 1,
-      "description": "Assigned field technician"
+      "in_list_view": 1
     },
     {
       "fieldname": "route_order",
       "fieldtype": "Int",
       "label": "Route Order",
-      "in_list_view": 1,
-      "description": "Order in daily route"
-    },
-    {
-      "fieldname": "estimated_duration",
-      "fieldtype": "Int",
-      "label": "Estimated Duration (mins)",
-      "description": "Estimated job duration in minutes"
-    },
-    {
-      "fieldname": "notes",
-      "fieldtype": "Text",
-      "label": "Notes",
-      "description": "Special instructions for this job"
+      "in_list_view": 1
     }
   ],
   "permissions": [
@@ -89,17 +55,6 @@
       "write": 1,
       "create": 1,
       "delete": 1
-    },
-    {
-      "role": "Field User",
-      "read": 1,
-      "write": 1
-    },
-    {
-      "role": "Customer",
-      "read": 1
     }
-  ],
-  "sort_field": "scheduled_date",
-  "sort_order": "ASC"
+  ]
 }

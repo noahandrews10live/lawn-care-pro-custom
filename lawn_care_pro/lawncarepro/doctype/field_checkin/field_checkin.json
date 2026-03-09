@@ -4,8 +4,6 @@
   "module": "LawnCare Pro",
   "autoname": "hash",
   "is_submittable": 0,
-  "editable_grid": 1,
-  "track_changes": 1,
   "fields": [
     {
       "fieldname": "job_schedule",
@@ -13,48 +11,30 @@
       "label": "Job Schedule",
       "options": "Job Schedule",
       "in_list_view": 1,
-      "reqd": 1,
-      "description": "Link to Job Schedule"
+      "reqd": 1
     },
     {
       "fieldname": "check_in_time",
       "fieldtype": "Datetime",
       "label": "Check In Time",
-      "in_list_view": 1,
-      "description": "Time field tech arrived at property"
+      "in_list_view": 1
     },
     {
       "fieldname": "check_out_time",
       "fieldtype": "Datetime",
       "label": "Check Out Time",
-      "in_list_view": 1,
-      "description": "Time field tech left property"
+      "in_list_view": 1
     },
     {
       "fieldname": "photos",
-      "fieldtype": "Table",
+      "fieldtype": "Attach Image",
       "label": "Photos",
-      "options": "Field Check-in Photo",
-      "description": "Photos taken during service"
+      "multiple": 1
     },
     {
       "fieldname": "notes",
       "fieldtype": "Text",
-      "label": "Notes",
-      "description": "Field notes from service visit"
-    },
-    {
-      "fieldname": "completion_status",
-      "fieldtype": "Select",
-      "label": "Completion Status",
-      "options": "Completed\nPartially Completed\nNeeds Follow-up\nCustomer Not Home",
-      "default": "Completed"
-    },
-    {
-      "fieldname": "customer_signature",
-      "fieldtype": "Attach Image",
-      "label": "Customer Signature",
-      "description": "Customer signature if obtained"
+      "label": "Notes"
     }
   ],
   "permissions": [
@@ -64,14 +44,6 @@
       "write": 1,
       "create": 1,
       "delete": 1
-    },
-    {
-      "role": "Field User",
-      "read": 1,
-      "write": 1,
-      "create": 1
     }
-  ],
-  "sort_field": "modified",
-  "sort_order": "DESC"
+  ]
 }

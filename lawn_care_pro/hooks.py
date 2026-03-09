@@ -9,19 +9,4 @@ app_color = "#2ecc71"
 app_email = "support@lawncarepro.com"
 app_license = "MIT"
 
-fixtures = [
-    {
-        "dt": "Custom Field",
-        "filters": [
-            [
-                "module",
-                "=",
-                "LawnCare Pro"
-            ]
-        ]
-    },
-    {
-        "dt": "Property DocType",
-        "filters": []
-    }
-]
+fixtures = []
