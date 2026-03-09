@@ -1,0 +1,78 @@
+{
+  "name": "Property",
+  "doctype": "DocType",
+  "module": "LawnCare Pro",
+  "autoname": "field:customer",
+  "is_submittable": 0,
+  "editable_grid": 1,
+  "track_changes": 1,
+  "fields": [
+    {
+      "fieldname": "customer",
+      "fieldtype": "Link",
+      "label": "Customer",
+      "options": "Customer",
+      "in_list_view": 1,
+      "reqd": 1,
+      "description": "Link to ERPNext Customer"
+    },
+    {
+      "fieldname": "latitude",
+      "fieldtype": "Data",
+      "label": "Latitude",
+      "in_list_view": 1,
+      "description": "GPS latitude coordinate"
+    },
+    {
+      "fieldname": "longitude",
+      "fieldtype": "Data",
+      "label": "Longitude",
+      "in_list_view": 1,
+      "description": "GPS longitude coordinate"
+    },
+    {
+      "fieldname": "gate_code",
+      "fieldtype": "Data",
+      "label": "Gate Code",
+      "description": "Access code for gated properties"
+    },
+    {
+      "fieldname": "square_footage",
+      "fieldtype": "Int",
+      "label": "Square Footage",
+      "description": "Total lawn area in square feet"
+    },
+    {
+      "fieldname": "access_notes",
+      "fieldtype": "Text",
+      "label": "Access Notes",
+      "description": "Special instructions for accessing property"
+    },
+    {
+      "fieldname": "address",
+      "fieldtype": "Small Text",
+      "label": "Address",
+      "description": "Property address (auto-populated from Customer)"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "LawnCare Pro User",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Sales User",
+      "read": 1
+    },
+    {
+      "role": "Customer",
+      "read": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "title_field": "customer"
+}

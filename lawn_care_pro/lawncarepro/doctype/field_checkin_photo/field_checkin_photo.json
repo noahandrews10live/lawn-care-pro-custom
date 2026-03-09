@@ -1,0 +1,22 @@
+{
+  "name": "Field Check-in Photo",
+  "doctype": "DocType",
+  "module": "LawnCare Pro",
+  "is_submittable": 0,
+  "autoname": "hash",
+  "fields": [
+    {
+      "fieldname": "photo",
+      "fieldtype": "Attach Image",
+      "label": "Photo"
+    },
+    {
+      "fieldname": "caption",
+      "fieldtype": "Small Text",
+      "label": "Caption"
+    }
+  ],
+  "permissions": [],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}
