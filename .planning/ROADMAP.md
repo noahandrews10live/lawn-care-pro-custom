@@ -49,7 +49,10 @@
 7. Dashed polyline connects stops in sequence
 8. Clicking marker shows popup with job details
 
-**Plans**: TBD
+**Plans**: 2 plans
+
+- [x] 02-route-optimization-01-PLAN.md — Job Schedule list view button
+- [x] 02-route-optimization-02-PLAN.md — Route Map page with Leaflet
 
 ---
 
@@ -132,7 +135,7 @@
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Docker Development Environment | 1/1 | Planned | - |
-| 2. Route Optimization Completion | 0/2 | Not started | - |
+| 2. Route Optimization Completion | 2/2 | ✅ Complete | - |
 | 3. Data Model Enhancements | 0/4 | Not started | - |
 | 4. Mobile Interface | 0/6 | Not started | - |
 | 5. Testing & Polish | 0/3 | Not started | - |
@@ -142,8 +145,8 @@
 ## Coverage
 
 **Total Requirements**: 22
-**Completed**: 3 (ROUTE-01, SCHED-01, SCHED-02)
-**Pending**: 19
+**Completed**: 5 (ROUTE-01, ROUTE-02, ROUTE-03, SCHED-01, SCHED-02)
+**Pending**: 17
 **Mapped to Phases**: 22/22 ✓
 
 ### Mapping

@@ -1,0 +1,95 @@
+<!-- Route Map Page HTML Template -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<style>
+.route-map-container {
+    padding: 15px;
+}
+
+.route-controls {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.route-controls label {
+    font-weight: bold;
+}
+
+.route-controls input[type="date"] {
+    padding: 8px;
+    border: 1px solid #d1d8dd;
+    border-radius: 4px;
+}
+
+#route-map {
+    height: 600px;
+    width: 100%;
+    border: 1px solid #d1d8dd;
+    border-radius: 4px;
+}
+
+.route-number-icon {
+    background: transparent;
+    border: none;
+}
+
+.route-number {
+    width: 30px;
+    height: 30px;
+    background: #2ecc71;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+    border: 2px solid #27ae60;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.route-legend {
+    margin-top: 10px;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.route-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 5px;
+}
+
+.route-legend-marker {
+    width: 20px;
+    height: 20px;
+    background: #2ecc71;
+    border-radius: 50%;
+    border: 2px solid #27ae60;
+}
+</style>
+
+<div class="route-map-container">
+    <div class="route-controls">
+        <label for="route-date">Date:</label>
+        <input type="date" id="route-date">
+        <button class="btn btn-primary" onclick="loadRoute()">Load Route</button>
+    </div>
+    <div id="route-map"></div>
+    <div class="route-legend">
+        <div class="route-legend-item">
+            <div class="route-legend-marker"></div>
+            <span>Optimized stop (numbered by route order)</span>
+        </div>
+        <div class="route-legend-item">
+            <div style="width: 30px; height: 3px; background: #3498db; border-top: 2px dashed #3498db;"></div>
+            <span>Route path</span>
+        </div>
+    </div>
+</div>

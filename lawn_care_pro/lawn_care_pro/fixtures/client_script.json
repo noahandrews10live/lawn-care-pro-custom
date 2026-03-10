@@ -1,0 +1,12 @@
+[
+  {
+    "doc_type": "Job Schedule",
+    "filter": "",
+    "is_default": 0,
+    "module": "LawnCare Pro",
+    "name": "Job Schedule-Optimize Route Button",
+    "script": "\nfrappe.listview_settings['Job Schedule'] = {\n    onload: function(listview) {\n        // Add custom button to the toolbar\n        listview.page.add_action_item(__('Optimize Route'), function() {\n            // Get selected job schedules\n            var checked = listview.get_checked_items();\n            \n            if (checked.length < 2) {\n                frappe.msgprint(__('Please select at least 2 Job Schedules to optimize the route.'));\n                return;\n            }\n            \n            // Extract job schedule names\n            var job_names = checked.map(function(item) {\n                return item.name;\n            });\n            \n            // Call the server-side API\n            frappe.call({\n                method: 'lawn_care_pro.lawn_care_pro.utils.route_optimizer.enqueue_route_optimization',\n                args: {\n                    job_schedule_names: JSON.stringify(job_names)\n                },\n                callback: function(r) {\n                    if (r.message.status === 'queued') {\n                        frappe.show_alert({\n                            message: __('Route optimization queued. Refresh in a moment.'),\n                            indicator: 'green'\n                        }, 5);\n                        // Refresh the list after a delay\n                        setTimeout(function() {\n                            listview.refresh();\n                        }, 10000);\n                    }\n                },\n                error: function(r) {\n                    frappe.msgprint(r.exc || __('An error occurred while queuing the route optimization.'));\n                }\n            });\n        });\n    }\n};\n",
+    "script_type": "Client",
+    "view": "List"
+  }
+]
