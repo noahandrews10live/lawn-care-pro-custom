@@ -1,0 +1,10 @@
+include MANIFEST.in
+include lawn_care_pro/lawn_care_pro/requirements.txt
+include lawn_care_pro/lawn_care_pro/license.txt
+recursive-include lawn_care_pro *.py
+recursive-include lawn_care_pro *.json
+recursive-include lawn_care_pro *.md
+recursive-include lawn_care_pro *.html
+recursive-include lawn_care_pro *.css
+recursive-include lawn_care_pro *.js
+recursive-include lawn_care_pro *.txt
