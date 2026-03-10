@@ -1,0 +1,20 @@
+# Development Environment Files
+
+# Ignore Docker volumes (database data)
+db-data/
+redis-queue-data/
+
+# Ignore site data
+sites/
+
+# Ignore logs
+logs/
+
+# Environment
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
